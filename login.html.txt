@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+</head>
+<body>
+	This is login page
+	<form action="LoginServlet" method="post">
+		UserId:<input type="text" name="userID"> Password:<input
+			type="password" name="Password"><br> <input
+			type="submit" value="login"> <input type="reset"
+			value="Reset">
+	</form>
+</body>
+</html>
