@@ -1,0 +1,109 @@
+package weekdays;
+
+public interface AA {
+
+	void add();
+	void sub();
+	
+}
+
+package weekdays;
+
+public interface BB {
+void mul();
+void div();
+
+}
+
+package weekdays;
+
+public interface CC {
+void mod();
+void ptbig();
+
+}
+package weekdays;
+
+public interface CC {
+void mod();
+void ptbig();
+
+}
+
+public class C2 implements BB, CC {
+int b=20;
+int a=2;
+	@Override
+	public void mod() {
+		// TODO Auto-generated method stub
+System.out.println("mod" + (b%a));
+	}
+
+	@Override
+	public void ptbig() {
+		// TODO Auto-generated method stub
+System.out.println("printing BIG");
+	}
+
+	@Override
+	public void mul() {
+		// TODO Auto-generated method stub
+System.out.println("multiplication :"+ (a*b));
+	}
+
+	@Override
+	public void div() {
+		// TODO Auto-generated method stub
+System.out.println("division:"+ b/a);
+	}
+
+}
+
+
+package weekdays;
+
+public class C3 implements AA, CC {
+
+	@Override
+	public void mod() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void ptbig() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void sub() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+package weekdays;
+
+public class mainASMBPall {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    C1 kk1 = new C1();
+    kk1.add();
+    C2 kk2= new C2();
+    kk2.mod();
+    
+	}
+
+}
+
