@@ -1,0 +1,107 @@
+<web-app id="WebApp_ID" version="2.4"
+ xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ 
+ <display-name>Archetype Created Web Application</display-name>
+ 
+ <servlet>
+   <servlet-name>dispatcher</servlet-name>
+   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+   <load-on-startup>1</load-on-startup>
+ </servlet>
+ 
+ <servlet-mapping>
+   <servlet-name>dispatcher</servlet-name>
+   <url-pattern>/</url-pattern>
+ </servlet-mapping>
+ 
+ <context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+ </context-param>
+ 
+ <listener>
+   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+</web-app>
+
+
+>>>>>>>>>>>>>>>>>>>>>>>Dispatcher-servlet.xml>>>>>>>>>>>>>>>>>>>>>>>>>>
+<web-app id="WebApp_ID" version="2.4"
+ xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ 
+ <display-name>Archetype Created Web Application</display-name>
+ 
+ <servlet>
+   <servlet-name>dispatcher</servlet-name>
+   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+   <load-on-startup>1</load-on-startup>
+ </servlet>
+ 
+ <servlet-mapping>
+   <servlet-name>dispatcher</servlet-name>
+   <url-pattern>/</url-pattern>
+ </servlet-mapping>
+ 
+ <context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+ </context-param>
+ 
+ <listener>
+   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+</web-app>
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>helloworld.java>>>>>>>>>>>>>>>>>>>>
+
+package com.sports.adidas.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class helloworld {
+	
+@RequestMapping ("/hello")
+public ModelAndView 
+	
+}
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>hello.jsp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>hello</title>
+</head>
+<body>
+<title>  welcome </title>
+</head>
+<style type="text/css">
+h3 {color:blue;}
+h3 {font-weight:bold;}
+</style>
+<body>
+<h3> <center> AUTOMOBILES</CENTER> </h3><BR>
+
+<h1> ${greeting  } </h1>
+	
+<img src= "ferrari_car_red.jpg"  alt= "pic1"> </img>
+</BODY>
+</HTML>
+</body>
+</html>
