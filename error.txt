@@ -1,0 +1,26 @@
+Aug 12, 2016 3:31:58 PM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@21bcffb5: startup date [Fri Aug 12 15:31:58 IST 2016]; root of context hierarchy
+Aug 12, 2016 3:31:59 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean 'categoryDAO' with a different definition: replacing [Generic bean: class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\gmuthyal\workspace\SHOPPINGBACKEND\target\classes\Com\Automobiles\Shopping\dao\CategoryDAOImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=applicationContextConfig; factoryMethodName=getCategoryDAO; initMethodName=null; destroyMethodName=(inferred); defined in Com.Automobiles.Shopping.config.ApplicationContextConfig]
+Aug 12, 2016 3:32:00 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.1.0.Final}
+Aug 12, 2016 3:32:00 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Aug 12, 2016 3:32:00 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Aug 12, 2016 3:32:00 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+Aug 12, 2016 3:32:00 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Aug 12, 2016 3:32:01 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.2.4.Final
+Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'category' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:701)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1180)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at Com.Automobiles.Shopping.CategoryTest.main(CategoryTest.java:22)
+
+
+PROJECT ERROR 12/08/16
