@@ -1,0 +1,21 @@
+Overriding bean definition for bean 'CategoryDAO' with a different definition:
+
+ replacing [Generic bean: class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]; scope=singleton; abstract=false; 
+
+lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; 
+
+initMethodName=null; destroyMethodName=null; defined in file 
+
+[C:\Users\gmuthyal\workspace\SHOPPINGBACKEND\target\classes\Com\Automobiles\Shopping\dao\CategoryDAOImpl.class]] with 
+
+[Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; 
+
+factoryBeanName=applicationContextConfig; factoryMethodName=getCategoryDAO; initMethodName=null;
+
+ destroyMethodName=(inferred); defined in Com.Automobiles.Shopping.config.ApplicationContextConfig]
+
+
+
+
+
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details
