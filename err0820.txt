@@ -22,3 +22,4 @@ Instantiation of bean failed; nested exception is org.springframework.beans.fact
 
 
 Cannot create PoolableConnectionFactory (Connection is broken: "java.net.ConnectException: Connection refused: connect: localhost" [90067-178])
+
