@@ -1,0 +1,33 @@
+WARNING: Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Fri Aug 19 11:41:19 IST 2016]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:416)
+
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.j2ee.server:MOTORS'
+ did not find a matching property.
+
+
+root of context hierarchy
+Exception in thread "main" java.lang.NoClassDefFoundError: org/springframework/context/event/EventListenerFactory
+
+
+Could not instantiate bean class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]: 
+No default constructor found; nested exception is java.lang.NoSuchMethodException: Com.Automobiles.Shopping.dao.CategoryDAOImpl.<init>()
+
+
+Could not instantiate bean class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]: No default constructor found; 
+nested exception is java.lang.NoSuchMethodException: Com.Automobiles.Shopping.dao.CategoryDAOImpl.<init>()
+
+
+
+
+
+www.indiabliz.com
+
+SEVERE: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.orm.hibernate4.LocalSessionFactoryBean]
+ for bean with name 'sessionFactory' defined in ServletContext resource [/WEB-INF/application-context.xml];
+ nested exception is java.lang.ClassNotFoundException: org.springframework.orm.hibernate4.LocalSessionFactoryBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1357)
+
+
+No mapping found for HTTP request with URI [/LIGHTS/] in DispatcherServlet with name 'dispatcher'

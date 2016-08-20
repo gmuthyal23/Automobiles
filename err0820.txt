@@ -1,0 +1,24 @@
+Error creating bean with name 'categoryDAO' defined in file [C:\Users\gmuthyal\workspace\ShoppingBackend\target\classes\Com\Automobiles\Shopping\dao\CategoryDAOImpl.class]:
+ Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]: No default constructor found; 
+nested exception is java.lang.NoSuchMethodException: Com.Automobiles.Shopping.dao.CategoryDAOImpl.<init>()
+
+Could not instantiate bean class [Com.Automobiles.Shopping.dao.CategoryDAOImpl]: No default constructor found; 
+nested exception is java.lang.NoSuchMethodException: Com.Automobiles.Shopping.dao.CategoryDAOImpl.<init>()
+
+
+a definition for bean 'categoryDAO' already exists. This top-level bean definition is considered as an override.
+class path resource [org/springframework/transaction/aspectj/AspectJTransactionManagementConfiguration.class] cannot be opened because it does not exist
+Exception in thread "main" org.springframework.beans.factory.BeanDefinitionStoreException: Failed to load bean class: Com.Automobiles.Shopping.config.ApplicationContextConfig;
+ nested exception is java.io.FileNotFoundException: class path resource [org/springframework/transaction/aspectj/AspectJTransactionManagementConfiguration.class] cannot be opened because it does not exist
+
+
+Exception in thread "main" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [Com/Automobiles/Shopping/config/ApplicationContextConfig.class]: 
+Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method 
+[public org.springframework.orm.hibernate3.HibernateTransactionManager Com.Automobiles.Shopping.config.ApplicationContextConfig.getTransactionManager(org.hibernate.SessionFactory)] threw exception;
+ nested exception is java.lang.NoClassDefFoundError: org/hibernate/engine/SessionFactoryImplementor
+(----this is is because i have imported hibernate 3 transactionmanager)----------------------
+
+
+
+
+Cannot create PoolableConnectionFactory (Connection is broken: "java.net.ConnectException: Connection refused: connect: localhost" [90067-178])
