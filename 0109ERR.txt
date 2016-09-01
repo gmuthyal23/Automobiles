@@ -1,0 +1,10 @@
+Error creating bean with name 'homeController': Unsatisfied dependency expressed through field 'userdetailsDAO':
+ No qualifying bean of type [Com.Automobiles.Shopping.dao.UserDetailsDAO] found for dependency [Com.Automobiles.Shopping.dao.UserDetailsDAO]: 
+expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations:
+ {@org.springframework.beans.factory.annotation.Autowired(required=true)}; nested exception is 
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [Com.Automobiles.Shopping.dao.UserDetailsDAO]
+ found for dependency [Com.Automobiles.Shopping.dao.UserDetailsDAO]: expected at least 1 bean which qualifies as autowire candidate for this dependency.
+ Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	
+
+this err happened on project shopping front end.>>  data not inserting from frontEND.
