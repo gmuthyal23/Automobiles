@@ -1,0 +1,112 @@
+package com.niit.controller;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.niit.shoppingback.dao.CategoryDAO;
+import com.niit.shoppingback.dao.ProductDAO;
+import com.niit.shoppingback.dao.SupplierDAO;
+import com.niit.shoppingback.dao.UserDetailsDAO;
+import com.niit.shoppingback.model.Category;
+import com.niit.shoppingback.model.Product;
+import com.niit.shoppingback.model.Supplier;
+import com.niit.shoppingback.model.UserDetails;
+
+
+
+@Controller
+public class HomeController {
+	@Autowired
+	CategoryDAO categoryDAO;
+	@Autowired
+	Category category;
+	@Autowired
+	UserDetailsDAO userdetailsDAO;
+	@Autowired
+	UserDetails userdetails;
+	@Autowired
+	ProductDAO productDAO;
+	@Autowired
+	Product product;
+	@Autowired
+	SupplierDAO supplierDAO;
+	@Autowired
+	Supplier supplier;
+	
+	
+	
+	
+		
+	@RequestMapping("/")
+	public ModelAndView showindex()
+	{
+		return new ModelAndView("home");
+	}
+	
+	@RequestMapping(value = "/category", method = RequestMethod.GET) 
+	public String displayLogin(Model model) { 
+	    model.addAttribute("category", new Category()); 
+	    return "category"; 
+	}
+	@RequestMapping(value="/userdetails",method=RequestMethod.GET)
+	public String show1(Model model){
+		model.addAttribute("userdetails",new UserDetails());
+		return"userdetails";
+	}
+
+	@RequestMapping(value="/product",method=RequestMethod.GET)
+	public String show2(Model model){
+		model.addAttribute("product", new Product());
+		return"product";
+	}
+	 
+	@RequestMapping(value="/supplier",method=RequestMethod.GET)
+	public String show3(Model model){
+		model.addAttribute("supplier", new Supplier());
+		return"supplier";
+	}
+	@RequestMapping("/login")
+	public ModelAndView showindex1()
+	{
+		return new ModelAndView("login");
+	}
+		
+	@RequestMapping(value="/add",method=RequestMethod.POST)
+	public ModelAndView category(@ModelAttribute("category")Category category, BindingResult result,HttpServletRequest request) throws IOException {
+		ModelAndView mv= new ModelAndView("home");
+      System.out.println("processing in add category");
+		categoryDAO.save(category);
+		return mv;
+	}
+	
+	@RequestMapping(value="/adduser",method=RequestMethod.POST)
+	public ModelAndView userdetails(@ModelAttribute("userdetails")UserDetails userdetails,BindingResult result,HttpServletRequest request) throws IOException {
+	ModelAndView ud= new ModelAndView("home");
+	userdetailsDAO.save(userdetails);
+	return ud;
+	}
+	
+	@RequestMapping(value="/addproduct",method=RequestMethod.POST)
+	public ModelAndView product(@ModelAttribute("product")Product product,BindingResult result,HttpServletRequest request) throws IOException {
+		ModelAndView pp= new ModelAndView("home");
+		productDAO.save(product);
+		return pp;
+	}
+	
+	@RequestMapping(value="/addsupplier",method=RequestMethod.POST)
+	public ModelAndView supplier(@ModelAttribute("supplier")Supplier supplier,BindingResult result,HttpServletRequest request)throws IOException {
+		ModelAndView sp= new ModelAndView("home");
+		supplierDAO.save(supplier);
+		return sp;
+	}
+}
